@@ -62,6 +62,6 @@ end
 def winner(board)
   won = won?(board)
   if won != nil
-    board[win_combo[0]]
+    board[won[0]]
   end
 end
