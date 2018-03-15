@@ -26,3 +26,13 @@ def full?(board)
     cell == "" || cell == " "
   end
 end
+
+def draw?(board)
+  if won?(board)
+    false
+  elsif full?(board) == false
+    false
+  else
+    true
+  end
+end
