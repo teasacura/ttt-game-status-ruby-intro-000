@@ -22,6 +22,6 @@ def won?(board)
 
   end
 end
-WIN_COMBINATIONS.each{ |win_combo|
-win_combo.each{ |win_index| }}
-position_1 = board[win_index]
+WIN_COMBINATIONS.select do |win_combo|
+  board[win_combo[0]] == board[win_combo[1]] && board[win_combo[1]] == board[win_combo[2]]
+end
