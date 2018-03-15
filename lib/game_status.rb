@@ -51,7 +51,7 @@ end
 
 def winner(board)
   if won?(board)
-    if position_taken?(board, index) == "X"
+    if board[win_combo[0]] == "X"
       "X"
     else
       "O"
