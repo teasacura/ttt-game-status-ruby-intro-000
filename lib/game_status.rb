@@ -51,7 +51,7 @@ end
 
 def winner(board)
   if won?(board) == true
-    if board[win_combo[1]] == "X"
+    if board[0] == "X"
       "X"
     else
       "O"
