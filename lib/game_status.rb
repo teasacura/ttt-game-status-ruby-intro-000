@@ -22,7 +22,7 @@ def won?(board)
 end
 
 def full?(board)
-  board.all? do |cell|
-    cell.full?
+  board.none? do |cell|
+    cell.empty?
   end
 end
