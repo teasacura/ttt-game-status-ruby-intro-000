@@ -61,5 +61,9 @@ end
 
 def winner(board)
   win_1 = won?(board)
+  if win_1
     board[win_1[0]]
+  else
+    nil
+  end
 end
