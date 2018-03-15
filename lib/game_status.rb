@@ -60,10 +60,6 @@ def over?(board)
 end
 
 def winner(board)
-  won = won?(board)
-  if won != nil
-    board[won[0]]
-  else
-    won = nil
-  end
+  win_1 = won?(board)
+    board[win_1[0]]
 end
