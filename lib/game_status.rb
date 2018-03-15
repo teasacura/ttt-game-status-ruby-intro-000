@@ -16,9 +16,19 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
-  WIN_COMBINATIONS.detect do |win_combo|
-  board[win_combo[0]] == board[win_combo[1]] && board[win_combo[1]] == board[win_combo[2]] && position_taken?(board, win_combo[0])
+  combo = 0
+  while combo < WIN_COMBINATIONS.length
+    current_combo = WIN_COMBINATIONS[combo]
+
+    won1 = current_combo.all? { |cell| board[cell] == "X" }
+    won2 = current_combo.all? { |cell| board[cell] == "O" }
+
+    if won1 == true || won2 == true
+      return current_combo
+    end
+    combo += 1
   end
+  false
 end
 
 def full?(board)
