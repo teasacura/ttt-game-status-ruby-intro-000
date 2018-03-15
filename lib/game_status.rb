@@ -23,6 +23,6 @@ end
 
 def full?(board)
   board.all? do |cell|
-    cell.empty?
+    cell.full?
   end
 end
