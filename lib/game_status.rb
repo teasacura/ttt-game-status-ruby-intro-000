@@ -50,11 +50,8 @@ def over?(board)
 end
 
 def winner(board)
-  if won?(board)
-    if board[win_combo[0]] == "X"
-      "X"
-    else
-      "O"
-    end
+  won = won?(board)
+  if won
+    board[win_combo[0]]
   end
 end
