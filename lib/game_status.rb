@@ -16,13 +16,7 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
-  if board.all?{|cell| " "}
-    nil
-  elsif !position_taken?(board, index)
-    WIN_COMBINATIONS.select do |win_combo|
-      board[win_combo[0]] == board[win_combo[1]] && board[win_combo[1]] == board[win_combo[2]]
-    end
-  end
+  WIN_COMBINATIONS.select do |win_combo|
+    board[win_combo[0]] == board[win_combo[1]] && board[win_combo[1]] == board[win_combo[2]]
+    position_taken?(board, index) 
 end
-
-
